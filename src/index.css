@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Manrope Bold;
+  src: url("/fonts/Manrope-Bold.ttf");
+}
+@font-face {
+  font-family: Manrope Light;
+  src: url("/fonts/Manrope-Light.ttf");
+}
+@font-face {
+  font-family: Manrope Medium;
+  src: url("/fonts/Manrope-Medium.ttf");
+}
+@font-face {
+  font-family: Manrope Regular;
+  src: url("/fonts/Manrope-Regular.ttf");
+}
+@font-face {
+  font-family: Manrope SemiBold;
+  src: url("/fonts/Manrope-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: Urbanist Bold;
+  src: url("/fonts/Urbanist-Bold.ttf");
+}
+@font-face {
+  font-family: Urbanist Light;
+  src: url("/fonts/Urbanist-Light.ttf");
+}
+@font-face {
+  font-family: Urbanist Medium;
+  src: url("/fonts/Urbanist-Medium.ttf");
+}
+@font-face {
+  font-family: Urbanist Regular;
+  src: url("/fonts/Urbanist-Regular.ttf");
+}
+@font-face {
+  font-family: Urbanist SemiBold;
+  src: url("/fonts/Urbanist-SemiBold.ttf");
+}
+
+@theme {
+  --font-mb: Manrope Bold, "sans-serif";
+  --font-ml: Manrope Light, "sans-serif";
+  --font-mm: Manrope Medium, "sans-serif";
+  --font-mr: Manrope Regular, "sans-serif";
+  --font-mb: Manrope SemiBold, "sans-serif";
+}
+
+@theme {
+  --font-ub: Urbanist Bold, "sans-serif";
+  --font-ul: Urbanist Light, "sans-serif";
+  --font-um: Urbanist Medium, "sans-serif";
+  --font-ur: Urbanist Regular, "sans-serif";
+  --font-ub: Urbanist SemiBold, "sans-serif";
+}

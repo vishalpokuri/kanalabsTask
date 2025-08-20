@@ -20,6 +20,10 @@
   font-family: Manrope SemiBold;
   src: url("/fonts/Manrope-SemiBold.ttf");
 }
+@font-face {
+  font-family: Manrope ExtraBold;
+  src: url("/fonts/Manrope-ExtraBold.ttf");
+}
 
 @font-face {
   font-family: Urbanist Bold;
@@ -48,6 +52,7 @@
   --font-mm: Manrope Medium, "sans-serif";
   --font-mr: Manrope Regular, "sans-serif";
   --font-mb: Manrope SemiBold, "sans-serif";
+  --font-meb: Manrope ExtraBold, "sans-serif";
 }
 
 @theme {
@@ -56,4 +61,19 @@
   --font-um: Urbanist Medium, "sans-serif";
   --font-ur: Urbanist Regular, "sans-serif";
   --font-ub: Urbanist SemiBold, "sans-serif";
+}
+
+@theme {
+  --color-cyanpri: #2ed3b7;
+  --color-card: #17181a;
+  --color-stroke: #ffffff1a;
+  --color-stroke2: #ffffff33;
+  --color-text4: #777879;
+  --color-text3: #a5a5a6;
+  --color-text2: #ffffffcc;
+
+  --color-tabs: #111213;
+
+  /* Buttons */
+  --color-btn-pri: #2ed3b7;
 }

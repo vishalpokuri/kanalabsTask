@@ -1,7 +1,7 @@
 import { useState } from "react";
 import HeaderButton from "./ui/headerButton";
 import type { Tab } from "../types/declaration";
-import GrayButtonCard from "./card/GrayButtonCard";
+import GrayCard from "./card/GrayCard";
 const headerButtons: { key: Tab; icon: string }[] = [
   { key: "Swap", icon: "headerIcons/swap.svg" },
   { key: "Trade", icon: "headerIcons/trade.svg" },
@@ -39,18 +39,18 @@ function Header() {
       </div>
 
       {/* Right Side  */}
-      <div className="flex gap-2">
-        <GrayButtonCard classes="text-xs">
+      <div className="flex gap-2 pt-1">
+        <GrayCard classes="text-xs">
           <img src="mainIcons/userCircle.svg" alt="" />
           <p className="font-mb text-[#00fff0]">Connect Wallet</p>
-        </GrayButtonCard>
-        <GrayButtonCard classes="text-xs h-8 w-8 relative">
+        </GrayCard>
+        <GrayCard classes="text-xs h-8 w-8 relative">
           <img src="mainIcons/bell.svg" alt="" className="" />
           <div className="absolute top-0 right-0 w-2 h-2 rounded-lg bg-[#FFB74D]"></div>
-        </GrayButtonCard>
-        <GrayButtonCard classes="text-xs h-8 w-8">
+        </GrayCard>
+        <GrayCard classes="text-xs h-8 w-8">
           <img src="mainIcons/gear.svg" alt="" />
-        </GrayButtonCard>
+        </GrayCard>
       </div>
     </div>
   );

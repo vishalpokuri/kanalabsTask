@@ -1,8 +1,9 @@
 import "./App.css";
-import SwapPage from "./pages/SwapPage";
+import ChartPage from "./pages/ChartPage";
+// import SwapPage from "./pages/SwapPage";
 
 function App() {
-  return <SwapPage />;
+  return <ChartPage />;
 }
 
 export default App;

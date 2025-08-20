@@ -1,4 +1,4 @@
-export default function Swap() {
+export default function Swap({ type }: { type: "from" | "to" }) {
   return (
     <div className="w-full gap-2 px-6 py-4 h-34 bg-[#111213] border rounded-2xl border-[#fff]/10 flex flex-col">
       {/* First row */}
@@ -7,7 +7,9 @@ export default function Swap() {
           {/* Title */}
           <div className="flex flex-col">
             <div className="flex items-center">
-              <span className="text-xs font-mr text-[#A5A5A6]">Pay from</span>
+              <span className="text-xs font-mr text-[#A5A5A6]">
+                {type === "from" ? "Pay from" : "Receive to"}
+              </span>
               <button className="px-2 py-1 text-cyanpri font-meb rounded text-xs">
                 Connect Wallet
               </button>
@@ -15,7 +17,12 @@ export default function Swap() {
           </div>
           {/* Value */}
           <div className="flex h-full items-center">
-            <span className="text-left font-mm text-xl text-text3">0.00</span>
+            <input
+              className="text-left font-mm text-xl text-text3 border-none outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+              placeholder="0.00"
+              type="number"
+              inputMode="decimal"
+            />
           </div>
         </div>
 

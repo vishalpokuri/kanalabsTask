@@ -1,7 +1,8 @@
 import { useState } from "react";
-import HeaderButton from "./ui/headerButton";
-import type { Tab } from "../types/declaration";
-import GrayCard from "./card/GrayCard";
+import HeaderButton from "../ui/headerButton";
+import GrayCard from "../card/GrayCard";
+import type { Tab } from "../../types/declaration";
+
 const headerButtons: { key: Tab; icon: string }[] = [
   { key: "Swap", icon: "headerIcons/swap.svg" },
   { key: "Trade", icon: "headerIcons/trade.svg" },
@@ -11,7 +12,7 @@ const headerButtons: { key: Tab; icon: string }[] = [
   { key: "Learn", icon: "headerIcons/learn.svg" },
 ];
 
-function Header() {
+function SwapHeader() {
   const [tab, setTab] = useState<Tab>("Swap");
   return (
     <div className="justify-between w-full h-12 text-white flex items-center px-4">
@@ -56,4 +57,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default SwapHeader;

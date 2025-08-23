@@ -1,65 +1,53 @@
 import BorderCard from "../components/chartPage/BorderCard";
 import ChartLayout from "../components/chartPage/ChartLayout";
-import MarketLimitContainer from "../components/chartPage/MarketLimitContainer";
-import OpenClose from "../components/chartPage/OpenClose";
+
+import Control from "../components/chartPage/divisions/Controls";
+import GraphComponent from "../components/chartPage/divisions/GraphComponent";
+import OrderbookandTrades from "../components/chartPage/divisions/OrderbookandTrades";
 
 function ChartPage() {
   return (
     <ChartLayout>
-      <div className="flex-1 flex flex-col justify-start mt-4 items-center h-full mx-auto py-1">
-        <aside className="w-60 space-y-2">
-          {/* Profile and USDT section */}
-          <BorderCard>
-            <section className="p-2 flex w-full items-center">
-              <div className="flex flex-col justify-start flex-grow text-left">
-                <p className="font-mr text-text3" style={{ fontSize: "10px" }}>
-                  Profile 1
-                </p>
-                <p className="font-meb text-xs text-text2">0.00 USDT</p>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 rounded bg-surface2 flex justify-center items-center">
-                  <img src="chartIcons/downloadIcon.svg" alt="" />
-                </div>
-                <div className="w-8 h-8 rounded bg-surface2 flex justify-center items-center">
-                  <img src="chartIcons/uploadIcon.svg" alt="" />
-                </div>
-              </div>
-            </section>
-          </BorderCard>
-
-          {/* Isolated and Hedge buttons */}
-          <section className="w-full flex items-center justify-center gap-2">
-            <BorderCard classes="h-7 text-xs border border-stroke flex w-full font-mb text-white items-center justify-center">
-              <button>Isolated</button>
-            </BorderCard>
-            <BorderCard classes="h-7 text-xs border border-stroke flex w-full font-mb text-white items-center justify-center">
-              <button>Hedge</button>
-            </BorderCard>
-          </section>
+      <div className="flex h-full items-start mt-2 w-full">
+        <div className="flex-1 flex justify-start flex-col items-start gap-2 h-full mx-auto py-1 w-full px-2 min-h-0">
           {/*  */}
-          <section>
-            <BorderCard classes="flex w-full flex-col overflow-clip">
-              <OpenClose />
-              <MarketLimitContainer />
-              {/* PriceCard Component */}
-              <BorderCard classes="flex-col p-2 mx-1 bg-[#111] border border-[#222] rounded-xl w-full max-w-xs ">
-                <div className="flex justify-between items-center">
-                  <span className="text-xs text-[#888]">Price</span>
-                  <span className="text-xs text-[#00e6ef] font-semibold">
-                    Mid
-                  </span>
-                </div>
-                <div className="flex justify-b  etween items-center px-1 py-2 bg-[#181818] rounded-lg">
-                  <span className="text-2xl text-white tracking-wide">
-                    1245689
-                  </span>
-                  <span className="text-base text-white font-bold">USDT</span>
-                </div>
-              </BorderCard>
-            </BorderCard>
+          <section className="flex flex-1 gap-2 min-h-0 h-full max-h-[600px] w-full">
+            <GraphComponent />
+            <OrderbookandTrades />
           </section>
-        </aside>
+          <BorderCard className="w-full p-0 flex flex-col">
+            <div className="flex w-full items-center border-b border-stroke text-xs text-white">
+              <button className="h-8 px-4 flex items-center justify-center font-meb bg-surface2 border-b-2 border-cyan text-cyan">
+                Open Orders
+              </button>
+              <button className="h-8 px-4 flex items-center justify-center font-mr border-b border-stroke text-text3">
+                Positions
+              </button>
+              <button className="h-8 px-4 flex items-center justify-center font-mr border-b border-stroke text-text3">
+                Order History
+              </button>
+              <button className="h-8 px-4 flex items-center justify-center font-mr border-b border-stroke text-text3">
+                Trade History
+              </button>
+              <button className="h-8 px-4 flex items-center justify-center font-mr border-b border-stroke text-text3">
+                Funding History
+              </button>
+              <button className="h-8 px-4 flex items-center justify-center font-mr border-b border-stroke text-text3">
+                Deposit/Withdraw History
+              </button>
+              <button className="h-8 px-2 flex items-center justify-center font-mr border-b border-stroke text-text3 ml-auto">
+                ...
+              </button>
+            </div>
+            <div className="flex flex-col items-center justify-center py-12 text-center">
+              <span className="text-text3 text-xs mb-2">
+                Sign in to see your Open orders
+              </span>
+              <button className="text-cyan font-meb text-base">Sign in</button>
+            </div>
+          </BorderCard>
+        </div>
+        <Control />
       </div>
     </ChartLayout>
   );

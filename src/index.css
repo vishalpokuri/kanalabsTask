@@ -45,6 +45,14 @@
   font-family: Urbanist SemiBold;
   src: url("/fonts/Urbanist-SemiBold.ttf");
 }
+@font-face {
+  font-family: DMMono Regular;
+  src: url("/fonts/DMMono-Regular.ttf");
+}
+
+@theme {
+  --font-dr: DMMono Regular, "sans-serif";
+}
 
 @theme {
   --font-mb: Manrope Bold, "sans-serif";
@@ -64,6 +72,8 @@
 }
 
 @theme {
+  /*  */
+  /* Colors */
   --color-cyanpri: #2ed3b7;
   --color-cyan: #00fff0;
   --color-card: #17181a;
@@ -76,6 +86,8 @@
   --color-text4: #777879;
   --color-text3: #a5a5a6;
   --color-text2: #ffffffcc;
+  --color-text1: #fff;
+  --color-disabled: #ffffff66;
 
   /* Tabs */
   --color-tabs: #111213;
@@ -84,5 +96,34 @@
   --color-btn-pri: #2ed3b7;
 
   /* Surface 2 */
+  --color-surface0: #080a0a;
+  --color-surface1: #121414;
   --color-surface2: #1c1f20;
+
+  /* Error or Success */
+  --color-errord: #ef5350;
+  --color-successd: #66bb6a;
+  --color-warningd: #ffb74d;
+
+  /* Custom Font Sizes */
+  --font-size-xxs: 10px;
+}
+
+.text-xxs {
+  font-size: var(--font-size-xxs);
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for IE, Edge */
+body {
+  -ms-overflow-style: none;
 }

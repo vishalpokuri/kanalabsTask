@@ -15,10 +15,10 @@ const headerButtons: { key: Tab; icon: string }[] = [
 function ChartHeader() {
   const [tab, setTab] = useState<Tab>("Swap");
   return (
-    <div className="justify-between w-full h-12 text-white flex items-center px-4">
+    <div className="justify-between w-full h-12 text-white flex items-center px-2">
       {/* Left Side  */}
       <div className="flex">
-        <img src="/mainIcons/kanaLabs.svg" alt="" />
+        <img src="/mainIcons/kanaLabs.svg" alt="" className="ml-1" />
         <div className="ml-8 flex">
           {headerButtons.map((item) => (
             <HeaderButton

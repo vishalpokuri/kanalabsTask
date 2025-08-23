@@ -2,12 +2,12 @@ import React from "react";
 
 interface BorderCardProps {
   children: React.ReactNode;
-  classes?: string;
+  className?: string;
 }
 
-function BorderCard({ children, classes = "" }: BorderCardProps) {
+function BorderCard({ children, className = "" }: BorderCardProps) {
   return (
-    <div className={`border border-stroke rounded-lg flex ${classes}`}>
+    <div className={`border border-stroke rounded-lg flex ${className}`}>
       {children}
     </div>
   );

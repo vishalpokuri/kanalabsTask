@@ -1,9 +1,14 @@
 @import "tailwindcss";
 #root {
-  max-width: 100%;
+  max-width: 1440px;
   height: 100vh;
   overflow-y: hidden;
   margin: 0 auto;
   text-align: center;
   background-color: "#080a0a";
+}
+
+.dotted-underline {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
 }

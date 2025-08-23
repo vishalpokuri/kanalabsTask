@@ -30,9 +30,9 @@ export const Button: React.FC<ButtonProps> = ({
     "disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none";
 
   const sizeStyles = {
-    small: "px-4 py-2 text-sm h-10",
-    medium: "px-5 py-2.5 text-base h-12",
-    large: "px-5 py-3 text-base h-12 min-w-[126px]",
+    small: "px-4 py-2 text-xs h-8 ",
+    medium: "px-5 py-2.5 text-base h-12 ",
+    large: "px-5 py-3 text-base h-12 min-w-[126px] ",
   };
 
   const variantStyles = {

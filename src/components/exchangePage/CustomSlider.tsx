@@ -31,10 +31,7 @@ function CustomSlider({
         </Slider.Track>
         <Slider.Thumb className="block w-4 h-4 bg-[#00e6ef] border-[3px] border-white rounded-full shadow focus:outline-none" />
       </Slider.Root>
-      <div
-        className="ml-4 px-2 py-1 bg-surface0 rounded-lg border border-stroke flex items-center justify-center font-mr min-w-11"
-        style={{ fontSize: "10px" }}
-      >
+      <div className="ml-4 px-2 py-1 bg-surface0 rounded-lg border border-stroke flex items-center justify-center font-mr min-w-11 text-xxs">
         <span className="text-text2 ">{value}</span>
         <span className="text-disabled ml-1">%</span>
       </div>

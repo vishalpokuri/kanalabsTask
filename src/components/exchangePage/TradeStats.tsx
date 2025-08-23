@@ -22,15 +22,10 @@ function TradeStats() {
         ))}
       </div>
       <div className="flex justify-between items-center mt-2">
-        <span
-          className="underline text-disabled font-mr"
-          style={{ fontSize: "10px" }}
-        >
+        <span className="underline text-disabled font-mr text-xxs">
           Estimated fees
         </span>
-        <span className="font-meb text-text3" style={{ fontSize: "10px" }}>
-          0.035% / 0.010%
-        </span>
+        <span className="font-meb text-text3 text-xxs">0.035% / 0.010%</span>
       </div>
     </div>
   );
@@ -48,10 +43,7 @@ function StatRow1({
   type: string;
 }) {
   return (
-    <div
-      className="w-full flex justify-between items-center"
-      style={{ fontSize: "10px" }}
-    >
+    <div className="w-full flex justify-between items-center text-xxs">
       <p className="font-meb text-text3">{left}</p>
       <p className="underline text-disabled font-mb">{type}</p>
       <p className="font-meb text-text3">{right}</p>

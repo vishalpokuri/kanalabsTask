@@ -16,9 +16,7 @@ function Controls() {
       <BorderCard>
         <section className="p-2 flex w-full items-center">
           <div className="flex flex-col justify-start flex-grow text-left">
-            <p className="font-mr text-text3" style={{ fontSize: "10px" }}>
-              Profile 1
-            </p>
+            <p className="font-mr text-text3 text-xxs">Profile 1</p>
             <p className="font-meb text-xs text-text2">0.00 USDT</p>
           </div>
           <div className="flex items-center space-x-2">
@@ -57,10 +55,7 @@ function Controls() {
             {/* Custom Radix */}
             <CustomSlider value={sliderValue} onValueChange={setSliderValue} />
             {/* Buy Sell Info */}
-            <section
-              style={{ fontSize: "10px" }}
-              className="flex justify-between items-center text-white p-2 px-1"
-            >
+            <section className="flex justify-between items-center text-white p-2 px-1 text-xxs">
               <div className="flex gap-1">
                 <span className="font-mr text-disabled">Buy</span>
                 <span className="font-meb text-text3">0.049</span>
@@ -88,6 +83,38 @@ function Controls() {
             <TradeStats />
           </section>
         </BorderCard>
+        {/* Account Overview Section */}
+        <section className="mt-4 mb-2 px-2">
+          <h3 className="font-meb text-xs text-text1 mb-2 text-left">
+            Account Overview
+          </h3>
+          <div className="space-y-2">
+            <div className="flex justify-between items-center">
+              <span className="font-mb underline text-xxs text-disabled cursor-pointer">
+                Account Equity
+              </span>
+              <span className="font-meb text-xxs text-text3">$0.00</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="font-mb text-xxs underline text-disabled">
+                Balance
+              </span>
+              <span className="font-meb text-xxs text-text3">$0.00</span>
+            </div>
+            <div className="flex justify-between  items-center">
+              <span className="font-mb text-xxs underline text-disabled">
+                Balance available to trade
+              </span>
+              <span className="font-meb text-xxs text-text3">$0.00</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="font-mb underline text-xxs text-disabled cursor-pointer">
+                Unrealised PnL
+              </span>
+              <span className="font-meb text-xxs text-text3">$0.00</span>
+            </div>
+          </div>
+        </section>
       </section>
     </aside>
   );

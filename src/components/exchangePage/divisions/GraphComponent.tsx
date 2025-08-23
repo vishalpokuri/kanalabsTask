@@ -27,20 +27,20 @@ function GraphComponent() {
               status={item.status}
             />
           ))}
-          <div className="flex justify-center">
-            <div className=" py-2 px-2 text-left">
+          <div className="grid grid-cols-2 gap-2 px-2 py-2 text-left">
+            <div className="px-2">
               <div className="text-xxs font-mr underline dotted-underline text-text3">
                 Funding
               </div>
-              <div className={`font-meb text-xs text-text2 text-warningd`}>
+              <div className="font-meb text-xs text-text2 text-warningd">
                 0.012%
               </div>
             </div>
-            <div className=" py-2 px-2 text-left">
+            <div className="px-2">
               <div className="text-xxs font-mr underline dotted-underline text-text3">
                 Next funding
               </div>
-              <div className={`font-meb text-xs text-text2`}>00:23:34</div>
+              <div className="font-meb text-xs text-text2">00:23:34</div>
             </div>
           </div>
         </section>

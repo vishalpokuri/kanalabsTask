@@ -24,10 +24,7 @@ function InfoInputCard({ type, value, unit }: InfoInputCardProps) {
       </div>
       <div className="flex justify-between items-center px-1 py-2 bg-surface0 rounded-lg border border-stroke">
         <span className="font-mr text-sm text-text2 px-1">{value}</span>
-        <span
-          className="text-text1 font-meb px-1 flex items-center gap-0.5 leading-0"
-          style={{ fontSize: "10px" }}
-        >
+        <span className="text-text1 font-meb px-1 flex items-center gap-0.5 leading-0 text-xxs">
           {unit}
           {type === "amount" && (
             <img src="chartIcons/switch-horizontal.svg" alt="" />

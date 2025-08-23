@@ -6,11 +6,7 @@ interface TPSLSelectorProps {
   onPositionChange?: (position: "long" | "short") => void;
 }
 
-function TPSLSelector({
-  checked = false,
-  onCheck,
-  onPositionChange,
-}: TPSLSelectorProps) {
+function TPSLSelector({ checked = false, onCheck }: TPSLSelectorProps) {
   return (
     <BorderCard className="flex items-center justify-between px-2 py-[10px] bg-surface1 border border-[#222] rounded-lg w-full max-w-md">
       <div className="flex items-center">
@@ -24,16 +20,10 @@ function TPSLSelector({
         <span className="text-text2 font-mr text-xs">TP/SL</span>
       </div>
       <div className="flex items-center gap-3 mr-2">
-        <span
-          style={{ fontSize: "10px" }}
-          className="text-text2 font-mr text-base cursor-pointer opacity-70"
-        >
+        <span className="text-text2 font-mr text-base cursor-pointer opacity-70 text-xxs">
           Long
         </span>
-        <span
-          style={{ fontSize: "10px" }}
-          className="text-text2 font-mr text-base cursor-pointer opacity-70"
-        >
+        <span className="text-text2 font-mr text-base cursor-pointer opacity-70 text-xxs">
           Short
         </span>
       </div>

@@ -71,47 +71,6 @@
   --font-ub: Urbanist SemiBold, "sans-serif";
 }
 
-@theme {
-  /*  */
-  /* Colors */
-  --color-cyanpri: #2ed3b7;
-  --color-cyan: #00fff0;
-  --color-card: #17181a;
-
-  /* Stroke */
-  --color-stroke: #ffffff1a;
-  --color-stroke2: #ffffff33;
-
-  /* Text */
-  --color-text4: #777879;
-  --color-text3: #a5a5a6;
-  --color-text2: #ffffffcc;
-  --color-text1: #fff;
-  --color-disabled: #ffffff66;
-
-  /* Tabs */
-  --color-tabs: #111213;
-
-  /* Buttons */
-  --color-btn-pri: #2ed3b7;
-
-  /* Surface 2 */
-  --color-surface0: #080a0a;
-  --color-surface1: #121414;
-  --color-surface2: #1c1f20;
-
-  /* Error or Success */
-  --color-errord: #ef5350;
-  --color-successd: #66bb6a;
-  --color-warningd: #ffb74d;
-
-  /* Custom Font Sizes */
-  --font-size-xxs: 10px;
-}
-
-.text-xxs {
-  font-size: var(--font-size-xxs);
-}
 /* Hide scrollbar for Chrome, Safari and Opera */
 ::-webkit-scrollbar {
   width: 0px;

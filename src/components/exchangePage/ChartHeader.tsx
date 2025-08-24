@@ -1,15 +1,31 @@
 import { useState } from "react";
 import HeaderButton from "../ui/headerButton";
-import GrayCard from "../card/GrayCard";
+import HeaderCTACard from "../card/HeaderCTACard";
 import type { Tab } from "../../types/declaration";
 
-const headerButtons: { key: Tab; icon: string }[] = [
-  { key: "Swap", icon: "headerIcons/swap.svg" },
-  { key: "Trade", icon: "headerIcons/trade.svg" },
-  { key: "Perps", icon: "headerIcons/perps.svg" },
-  { key: "OPerps", icon: "headerIcons/Operps.svg" },
-  { key: "Refer", icon: "headerIcons/refer.svg" },
-  { key: "Learn", icon: "headerIcons/learn.svg" },
+import {
+  Learn,
+  Swap,
+  Trade,
+  Perps,
+  Operps,
+  Refer,
+  DownArrow,
+  Star01,
+  Coins01,
+  Credit,
+  InfoCircle,
+  UserCircle,
+} from "../../Svg/headerIcons/index";
+import { Bell, Gear } from "../../Svg/mainIcons";
+
+const headerButtons: { key: Tab; icon: React.ReactNode }[] = [
+  { key: "Swap", icon: <Swap width={16} height={16} /> },
+  { key: "Trade", icon: <Trade width={16} height={16} /> },
+  { key: "Perps", icon: <Perps width={16} height={16} /> },
+  { key: "OPerps", icon: <Operps width={16} height={16} /> },
+  { key: "Refer", icon: <Refer width={16} height={16} /> },
+  { key: "Learn", icon: <Learn width={16} height={16} /> },
 ];
 
 function ChartHeader() {
@@ -30,38 +46,40 @@ function ChartHeader() {
           ))}
         </div>
         {/* More button */}
-        <button className="flex items-center justify-center gap-1 px-3 py-2 bg-transparent border-none cursor-pointer text-[#fff]/80">
+        <button className="flex items-center justify-center gap-1 px-3 py-2 bg-transparent border-none cursor-pointer text-text2">
           <span className="text-xs font-mb">{"More"}</span>
-          <img
-            src={"headerIcons/downArrow.svg"}
-            className="flex items-center"
-          />
+          <div>
+            <DownArrow width={16} height={16} />
+          </div>
         </button>
       </div>
-
       {/* Right Side  */}
       <div className="flex gap-2 pt-1">
-        <GrayCard classes="text-xs">
-          <img src="headerIcons/star-01.svg" alt="" />
-          <p className="font-mb text-[#00fff0] mr-1">VIP</p>
-          <img src="headerIcons/info-circle.svg" alt="" />
-        </GrayCard>
-        <GrayCard classes="text-xs">
-          <img src="headerIcons/coins-01.svg" alt="" />
-          <p className="font-mb text-[#00fff0]">Win $20</p>
-        </GrayCard>
-        <GrayCard classes="text-xs">
-          <img src="headerIcons/credit.svg" alt="" />
-          <p className="font-mb text-[#00fff0]">Deposit</p>
-        </GrayCard>
+        <HeaderCTACard classes="text-xs text-disabled">
+          <Star01 width={16} height={16} className="text-disabled" />
+          <p className="mr-1">VIP</p>
+          <InfoCircle width={16} height={16} className="text-warningd" />
+        </HeaderCTACard>
+        <HeaderCTACard classes="text-xs text-cyan">
+          <Coins01 width={16} height={16} />
+          <p className="">Win $20</p>
+        </HeaderCTACard>
+        <HeaderCTACard classes="text-xs text-cyan">
+          <Credit width={16} height={16} />
+          <p className="">Deposit</p>
+        </HeaderCTACard>
+        <HeaderCTACard classes="text-xs text-cyan">
+          <UserCircle width={16} height={16} />
+          <p className="">Sign in</p>
+        </HeaderCTACard>
 
-        <GrayCard classes="text-xs h-8 w-8 relative">
-          <img src="mainIcons/bell.svg" alt="" className="" />
+        <HeaderCTACard classes="text-xs h-8 w-8 relative">
+          <Bell width={16} height={16} className="text-text1" />
           <div className="absolute top-0 right-0 w-2 h-2 rounded-lg bg-[#FFB74D]"></div>
-        </GrayCard>
-        <GrayCard classes="text-xs h-8 w-8">
-          <img src="mainIcons/gear.svg" alt="" />
-        </GrayCard>
+        </HeaderCTACard>
+        <HeaderCTACard classes="text-xs h-8 w-8">
+          <Gear width={16} height={16} className="text-text1" />
+        </HeaderCTACard>
       </div>
     </div>
   );

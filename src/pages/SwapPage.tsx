@@ -29,7 +29,7 @@ function SwapPage() {
           />
         </div>
         <section className="space-y-3 w-full">
-          <div className="w-full h-[500px] text-white bg-card border border-[#fff]/10 flex flex-col space-y-4 p-6 rounded-b-2xl rounded-tr-2xl ">
+          <div className="w-full h-[500px] bg-card border border-stroke flex flex-col space-y-4 p-6 rounded-b-2xl rounded-tr-2xl ">
             {/* Swap and options */}
             <SwapOptions />
             {/* Tokens selection */}

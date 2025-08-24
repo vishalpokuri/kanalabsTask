@@ -32,9 +32,7 @@ function GraphComponent() {
               <div className="text-xxs font-mr underline dotted-underline text-text3">
                 Funding
               </div>
-              <div className="font-meb text-xs text-text2 text-warningd">
-                0.012%
-              </div>
+              <div className="font-meb text-xs  text-warningd">0.012%</div>
             </div>
             <div className="px-2">
               <div className="text-xxs font-mr underline dotted-underline text-text3">

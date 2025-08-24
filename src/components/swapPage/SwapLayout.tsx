@@ -7,7 +7,7 @@ type SwapLayoutProps = {
 
 function SwapLayout({ children }: SwapLayoutProps) {
   return (
-    <div className="w-full h-full flex flex-col bg-[#080a0a]">
+    <div className="w-full h-full flex flex-col bg-background">
       <SwapHeader />
       {children}
       <Footer />

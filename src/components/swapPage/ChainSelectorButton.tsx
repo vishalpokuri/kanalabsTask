@@ -1,3 +1,5 @@
+import { ArrowSplit2, ArrowsShuffle } from "../../Svg/swapContentIcons";
+
 export default function ChainSelectorButton({
   type,
   selected,
@@ -16,14 +18,15 @@ export default function ChainSelectorButton({
           : "bg-tabs text-text3 z-0 border-b border-card "
       }`}
     >
-      <img
-        src={
-          type == "same"
-            ? "swapContentIcons/arrowSplit2.svg"
-            : "swapContentIcons/arrowsShuffle.svg"
-        }
-        alt=""
-      />
+      <div>
+        {type === "same" ? (
+          // Arrow Split SVG
+          <ArrowSplit2 />
+        ) : (
+          // Arrows Shuffle SVG
+          <ArrowsShuffle />
+        )}
+      </div>
       <p className="font-meb text-xs">
         {type === "same" ? "Same-chain" : "Cross-chain"}
       </p>

@@ -1,3 +1,4 @@
+import { SwitchHorizontal } from "../../Svg/chartIcons";
 import BorderCard from "./BorderCard";
 
 interface InfoInputCardProps {
@@ -8,7 +9,7 @@ interface InfoInputCardProps {
 
 function InfoInputCard({ type, value, unit }: InfoInputCardProps) {
   return (
-    <BorderCard className="flex-col p-0.5 pb-1 bg-surface1 border border-[#222] rounded w-full max-w-xs px-2">
+    <BorderCard className="flex-col p-0.5 pb-1 bg-surface1 border border-stroke rounded w-full max-w-xs px-2">
       <div className="flex justify-between items-center py-0.5">
         <span className="text-[#888] font-mr" style={{ fontSize: "8px" }}>
           {type === "price" ? "Price" : "Amount"}
@@ -26,9 +27,7 @@ function InfoInputCard({ type, value, unit }: InfoInputCardProps) {
         <span className="font-mr text-sm text-text2 px-1">{value}</span>
         <span className="text-text1 font-meb px-1 flex items-center gap-0.5 leading-0 text-xxs">
           {unit}
-          {type === "amount" && (
-            <img src="chartIcons/switch-horizontal.svg" alt="" />
-          )}
+          {type === "amount" && <SwitchHorizontal />}
         </span>
       </div>
     </BorderCard>

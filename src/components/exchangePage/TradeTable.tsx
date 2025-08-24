@@ -38,7 +38,7 @@ function TradeTable() {
         {trades.map((trade, idx) => (
           <div
             key={idx}
-            className="flex items-center border-b border-[#222] last:border-b-0 font-dr text-xxs py-1"
+            className="flex items-center border-b border-stroke last:border-b-0 font-dr text-xxs py-1"
           >
             <div
               className={`w-10 ${

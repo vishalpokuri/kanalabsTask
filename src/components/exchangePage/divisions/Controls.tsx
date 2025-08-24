@@ -7,6 +7,7 @@ import MarketLimitContainer from "../MarketLimitContainer";
 import OpenClose from "../OpenClose";
 import TPSLSelector from "../TPSLSelector";
 import TradeStats from "../TradeStats";
+import { DownloadIcon, UploadIcon } from "../../../Svg/chartIcons";
 
 function Controls() {
   const [sliderValue, setSliderValue] = useState(50);
@@ -21,10 +22,10 @@ function Controls() {
           </div>
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 rounded bg-surface2 flex justify-center items-center">
-              <img src="chartIcons/downloadIcon.svg" alt="" />
+              <DownloadIcon width={16} height={16} className="text-text3" />
             </div>
             <div className="w-8 h-8 rounded bg-surface2 flex justify-center items-center">
-              <img src="chartIcons/uploadIcon.svg" alt="" />
+              <UploadIcon width={16} height={16} className="text-text3" />
             </div>
           </div>
         </section>
@@ -32,10 +33,10 @@ function Controls() {
 
       {/* Isolated and Hedge buttons */}
       <section className="w-full flex items-center justify-center gap-2">
-        <BorderCard className="h-7 text-xs border border-stroke flex w-full font-mb text-white items-center justify-center">
+        <BorderCard className="h-7 text-xs border border-stroke flex w-full font-mb text-text1 items-center justify-center">
           <button>Isolated</button>
         </BorderCard>
-        <BorderCard className="h-7 text-xs border border-stroke flex w-full font-mb text-white items-center justify-center">
+        <BorderCard className="h-7 text-xs border border-stroke flex w-full font-mb text-text1 items-center justify-center">
           <button>Hedge</button>
         </BorderCard>
       </section>
@@ -58,11 +59,11 @@ function Controls() {
             <section className="flex justify-between items-center text-white p-2 px-1 text-xxs">
               <div className="flex gap-1">
                 <span className="font-mr text-disabled">Buy</span>
-                <span className="font-meb text-text3">0.049</span>
+                <span className="font-meb text-text3">0.049 BTC</span>
               </div>
               <div className="flex gap-1">
                 <span className="font-mr text-disabled">Sell</span>
-                <span className="font-meb text-text3">0.049</span>
+                <span className="font-meb text-text3">0.049 BTC</span>
               </div>
             </section>
 

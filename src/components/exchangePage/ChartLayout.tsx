@@ -7,7 +7,7 @@ type ChartLayoutProps = {
 
 function ChartLayout({ children }: ChartLayoutProps) {
   return (
-    <div className="w-full h-full flex flex-col bg-[#080a0a] ">
+    <div className="w-full h-full flex flex-col bg-background ">
       <ChartHeader />
       <section className="w-full h-full flex flex-1 overflow-auto px-2">
         {children}

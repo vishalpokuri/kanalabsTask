@@ -1,6 +1,6 @@
 export default function Swap({ type }: { type: "from" | "to" }) {
   return (
-    <div className="w-full gap-2 px-6 py-4 h-34 bg-[#111213] border rounded-2xl border-[#fff]/10 flex flex-col">
+    <div className="w-full gap-2 px-6 py-4 h-34 bg-elevation2 border rounded-2xl border-stroke flex flex-col">
       {/* First row */}
       <div className="flex justify-between flex-1 gap-3">
         <div className="flex flex-col justify-between flex-1 border-b border-b-stroke">
@@ -10,7 +10,7 @@ export default function Swap({ type }: { type: "from" | "to" }) {
               <span className="text-xs font-mr text-[#A5A5A6]">
                 {type === "from" ? "Pay from" : "Receive to"}
               </span>
-              <button className="px-2 py-1 text-cyanpri font-meb rounded text-xs">
+              <button className="px-2 py-1 text-btn-pri font-meb rounded text-xs">
                 Connect Wallet
               </button>
             </div>
@@ -54,11 +54,11 @@ function TokenSelectionDisplay() {
 
       {/* Outer circle */}
       <div className="relative w-10 h-10 flex items-center justify-center">
-        <BorderBig />
+        <BorderBig className="text-stroke2" />
         {/* Inner circle */}
-        <div className="w-10 h-10 rounded-full bg-[#1D1E20] flex items-center justify-center">
-          <div className="absolute -right-1 -bottom-0 z-10 w-4 h-4 rounded-full flex items-center justify-center bg-[#1D1E20]">
-            <BorderSmall />
+        <div className="w-10 h-10 rounded-full bg-topbar flex items-center justify-center">
+          <div className="absolute -right-1 -bottom-0 z-10 w-4 h-4 rounded-full flex items-center justify-center bg-topbar">
+            <BorderSmall className="text-stroke2" />
           </div>
         </div>
       </div>
@@ -74,15 +74,15 @@ function TokenSelectionDisplay() {
   );
 }
 
-function BorderBig() {
+function BorderBig({ className }: { className?: string }) {
   return (
-    <svg className="absolute inset-0" viewBox="0 0 40 40">
+    <svg className={`absolute inset-0 ${className ?? ""}`} viewBox="0 0 40 40">
       <circle
         cx="20"
         cy="20"
         r="19"
         fill="none"
-        stroke="#FFFFFF33"
+        stroke="currentColor"
         strokeWidth="1"
         strokeDasharray="2 2"
       />
@@ -90,15 +90,15 @@ function BorderBig() {
   );
 }
 
-function BorderSmall() {
+function BorderSmall({ className }: { className?: string }) {
   return (
-    <svg className="absolute inset-0" viewBox="0 0 16 16">
+    <svg className={`absolute inset-0 ${className ?? ""}`} viewBox="0 0 16 16">
       <circle
         cx="8"
         cy="8"
         r="7.5"
         fill="none"
-        stroke="#FFFFFF33"
+        stroke="currentColor"
         strokeWidth="1"
         strokeDasharray="2 2"
       />

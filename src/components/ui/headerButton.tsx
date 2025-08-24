@@ -2,7 +2,7 @@ import React from "react";
 import type { Tab } from "../../types/declaration";
 
 interface HeaderButtonProps {
-  svg: string;
+  svg: React.ReactNode;
   text: string;
   selected: boolean;
   onClick: (tab: Tab) => void;
@@ -15,11 +15,13 @@ const HeaderButton: React.FC<HeaderButtonProps> = ({
   onClick,
 }) => (
   <button
-    className="flex items-center justify-center gap-1 px-3 py-2 bg-transparent border-none cursor-pointer text-[#fff]/80"
+    className="flex items-center justify-center gap-1 px-3 py-2 bg-transparent border-none cursor-pointer text-text2"
     onClick={() => onClick(text as Tab)}
   >
-    <img src={svg} alt={text} className="flex items-center" />
-    <span className={`text-xs font-mb ${selected ? "text-[#00fff0]" : ""}`}>
+    <span className={`flex items-center ${selected ? "text-cyan" : ""}`}>
+      {svg}
+    </span>
+    <span className={`text-xs font-meb ${selected ? "text-cyan" : ""}`}>
       {text}
     </span>
   </button>

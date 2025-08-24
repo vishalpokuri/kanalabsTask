@@ -17,7 +17,7 @@ function CustomSlider({
   step = 1,
 }: CustomSliderProps) {
   return (
-    <BorderCard className="flex items-center p-2 bg-surface1 border border-[#222] w-full ">
+    <BorderCard className="flex items-center p-2 bg-surface1 border border-stroke w-full ">
       <Slider.Root
         className="relative flex items-center w-full h-6"
         value={[value]}

@@ -1,21 +1,30 @@
+import { useState } from "react";
 import { ChevronRightIcon } from "../../Svg/Icons";
 
 function MarketLimitContainer() {
+  const [selected, setSelected] = useState<"market" | "limit">("market");
+
   return (
     <div className="flex gap-2 h-10 justify-between w-full items-center pr-2">
       {/* Market and Limit buttons */}
       <div className="h-full">
         <button
-          className={`px-3 h-full font-meb text-xs  focus:outline-none ${
-            true ? "border-b-1 border-cyan text-white" : "text-text2"
+          className={`px-3 h-full font-meb text-xs focus:outline-none ${
+            selected === "market"
+              ? "border-b-1 border-cyan text-text1"
+              : "text-text3"
           }`}
+          onClick={() => setSelected("market")}
         >
           Market
         </button>
         <button
-          className={`px-3 h-full font-meb text-xs  focus:outline-none ${
-            false ? "border-b-1 border-cyan text-white" : "text-text2"
+          className={`px-3 h-full font-meb text-xs focus:outline-none ${
+            selected === "limit"
+              ? "border-b-1 border-cyan text-text1"
+              : "text-text3"
           }`}
+          onClick={() => setSelected("limit")}
         >
           Limit
         </button>

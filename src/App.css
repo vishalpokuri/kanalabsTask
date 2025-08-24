@@ -5,10 +5,119 @@
   overflow-y: hidden;
   margin: 0 auto;
   text-align: center;
-  background-color: "#080a0a";
+  background-color: var(--background);
 }
 
 .dotted-underline {
   text-decoration-line: underline;
   text-decoration-style: dotted;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-cyanpri: var(--cyanpri);
+  --color-cyan: var(--cyan);
+  --color-card: var(--card);
+  --color-tabselected: var(--tabselected);
+  --color-topbar: var(--topbar);
+
+  --color-elevation2: var(--elevation2);
+
+  --color-stroke: var(--stroke);
+  --color-stroke2: var(--stroke2);
+
+  --color-text4: var(--text4);
+  --color-text3: var(--text3);
+  --color-text2: var(--text2);
+  --color-text1: var(--text1);
+  --color-disabled: var(--disabled);
+
+  --color-tabs: var(--tabs);
+  --color-btn-pri: var(--btn-pri);
+
+  --color-surface0: var(--surface0);
+  --color-surface1: var(--surface1);
+  --color-surface2: var(--surface2);
+
+  --color-errord: var(--errord);
+  --color-successd: var(--successd);
+  --color-warningd: var(--warningd);
+  --color-border1: var(--border1);
+
+  --font-size-xxs: var(--font-size-xxs);
+}
+
+:root {
+  /* Light mode colors */
+  --tabselected: #fcfdfe;
+  --background: #f7f8fa; /* Fixed the typo here */
+  --cyanpri: #00fff0;
+  --cyan: #009696;
+  --card: #fcfdfe;
+  --topbar: #eff7f8;
+
+  --elevation2: #f2f9f9;
+
+  --stroke: #e3e8ef;
+  --stroke2: #d2d2d2;
+
+  --border1: #0000001a;
+  --text4: #a5a5a6;
+  --text3: #12151880;
+  --text2: #121518cc;
+  --text1: #121518;
+  --disabled: #12151866;
+
+  --tabs: #eff7f8;
+  --btn-pri: #0e9384;
+
+  --surface0: #ffffff;
+  --surface1: #f7f8fa;
+  --surface2: #ebeef2;
+
+  --errord: #ef5350;
+  --successd: #66bb6a;
+  --warningd: #ffb74d;
+
+  --font-size-xxs: 10px;
+}
+
+.dark {
+  /* Dark mode colors */
+  --tabselected: #ffffff0f;
+  --background: #080a0a; /* Added this line */
+  --cyanpri: #2ed3b7;
+  --cyan: #00fff0;
+  --card: #17181a;
+  --topbar: #1d1e20;
+
+  --elevation2: #111213;
+
+  --stroke: #ffffff1a;
+  --stroke2: #ffffff33;
+
+  --border1: #ffffff1a;
+
+  --text4: #777879;
+  --text3: #a5a5a6;
+  --text2: #ffffffcc;
+  --text1: #fff;
+  --disabled: #ffffff66;
+
+  --tabs: #111213;
+  --btn-pri: #2ed3b7;
+
+  --surface0: #080a0a;
+  --surface1: #121414;
+  --surface2: #1c1f20;
+
+  --errord: #ef5350;
+  --successd: #66bb6a;
+  --warningd: #ffb74d;
+
+  --font-size-xxs: 10px;
+}
+
+.text-xxs {
+  font-size: var(--font-size-xxs);
 }

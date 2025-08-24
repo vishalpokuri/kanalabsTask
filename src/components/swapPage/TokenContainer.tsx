@@ -14,7 +14,7 @@ function TokenContainer({
   return (
     <div
       className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-        selected && "bg-[#FFFFFF0F] border border-[#FFFFFF1A]"
+        selected && "bg-tabselected border border-stroke"
       }`}
       onClick={onClick}
     >

@@ -7,6 +7,7 @@ import { Button } from "../components/ui/Button";
 import ChainSelectorButton from "../components/swapPage/ChainSelectorButton";
 import TokenContainer from "../components/swapPage/TokenContainer";
 import SwapLayout from "../components/swapPage/SwapLayout";
+import CustomButton from "../components/ui/CustomButton";
 
 function SwapPage() {
   const [selectedToken, setSelectedToken] = useState<Token>("Aptos");
@@ -50,7 +51,9 @@ function SwapPage() {
               </div>
               <Swap type="to" />
             </div>
-            <Button variant="secondary">Swap Now</Button>
+            <CustomButton size="large" variant="secondary" type="text">
+              Swap Now
+            </CustomButton>
           </div>
           {/* Dropdown */}
           <div className="w-full h-16 bg-card border border-stroke rounded-2xl flex flex-row justify-between items-center px-6">

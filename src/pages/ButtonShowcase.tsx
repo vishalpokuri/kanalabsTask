@@ -1,7 +1,11 @@
 import { useState } from "react";
 import CustomButton from "../components/ui/CustomButton";
 
-const actions = ["default", "hovered", "disabled", "selected"];
+const states = [
+  { name: "Default", selected: false, disabled: false },
+  { name: "Selected", selected: true, disabled: false },
+  { name: "Disabled", selected: false, disabled: true },
+];
 const variants = [
   "default",
   "secondary",
@@ -73,11 +77,11 @@ const ButtonShowcase = () => {
         </label>
       </div>
 
-      {/* Loop through actions first, then variants */}
-      {actions.map((action) => (
+      {/* Loop through states first, then variants */}
+      {states.map((state) => (
         <Section
-          key={action}
-          title={`${action.charAt(0).toUpperCase() + action.slice(1)} State`}
+          key={state.name}
+          title={`${state.name} State`}
         >
           <VariantGrid>
             {variants.map((variant) => (
@@ -90,9 +94,10 @@ const ButtonShowcase = () => {
                 </div>
                 <CustomButton
                   size={size as any}
-                  action={action as any}
                   variant={variant as any}
                   type={type as any}
+                  selected={state.selected}
+                  disabled={state.disabled}
                 >
                   {type !== "onlyIcon" ? "Button" : null}
                 </CustomButton>

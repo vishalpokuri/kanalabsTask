@@ -8,6 +8,7 @@ import OpenClose from "../OpenClose";
 import TPSLSelector from "../TPSLSelector";
 import TradeStats from "../TradeStats";
 import { DownloadIcon, UploadIcon } from "../../../Svg/chartIcons";
+import CustomButton from "../../ui/CustomButton";
 
 function Controls() {
   const [sliderValue, setSliderValue] = useState(50);
@@ -71,14 +72,14 @@ function Controls() {
             <TPSLSelector />
 
             {/* SigninButton */}
-            <Button
-              type="button"
+            <CustomButton
+              type="text"
               variant="secondary"
               className="w-full rounded-xl my-2 text-xs"
-              size="small"
+              size="medium"
             >
               Sign in
-            </Button>
+            </CustomButton>
 
             {/* Trade Stats */}
             <TradeStats />

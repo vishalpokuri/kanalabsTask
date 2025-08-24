@@ -23,17 +23,24 @@ function Home() {
         {/* Navigation buttons */}
         <div className="flex gap-4">
           <CustomButton
-            size="medium"
-            action=""
+            size="large"
+            type="text"
             onClick={() => navigate("/exchange")}
             variant="secondary"
           >
             Exchange
           </CustomButton>
-          <CustomButton onClick={() => navigate("/swap")} variant="secondary">
+          <CustomButton
+            onClick={() => navigate("/swap")}
+            size="large"
+            type="text"
+            variant="secondary"
+          >
             Swap
           </CustomButton>
           <CustomButton
+            size="large"
+            type="text"
             onClick={() => navigate("/buttons")}
             variant="secondary"
           >
@@ -42,14 +49,16 @@ function Home() {
         </div>
 
         {/* Dark mode toggle */}
-        <Button
+        <CustomButton
+          size="large"
+          type="text"
           onClick={toggleDarkMode}
           variant="secondary"
-          className="flex items-center gap-2"
+          className="flex items-center gap-3"
         >
           {isDarkMode ? "🌞" : "🌙"}
           {isDarkMode ? "Light Mode" : "Dark Mode"}
-        </Button>
+        </CustomButton>
       </div>
     </div>
   );

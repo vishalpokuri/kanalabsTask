@@ -8,7 +8,6 @@ import {
 } from "react-router-dom";
 import ExchangePage from "./pages/ExchangePage";
 import SwapPage from "./pages/SwapPage";
-import { Button } from "./components/ui/Button";
 import { ThemeProvider, useTheme } from "./contexts/ThemeContext.tsx";
 import ButtonShowcase from "./pages/ButtonShowcase.tsx";
 import CustomButton from "./components/ui/CustomButton.tsx";

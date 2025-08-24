@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Button } from "../../ui/Button";
 import BorderCard from "../BorderCard";
 import CustomSlider from "../CustomSlider";
 import InfoInputCard from "../InfoInputCard";

@@ -3,7 +3,6 @@ import { tokenList } from "../data/tokens";
 import type { Token } from "../types/declaration";
 import Swap from "../components/swapPage/Swap";
 import SwapOptions from "../components/swapPage/SwapOptions";
-import { Button } from "../components/ui/Button";
 import ChainSelectorButton from "../components/swapPage/ChainSelectorButton";
 import TokenContainer from "../components/swapPage/TokenContainer";
 import SwapLayout from "../components/swapPage/SwapLayout";

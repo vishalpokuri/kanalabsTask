@@ -27,14 +27,14 @@ function GraphComponent() {
               status={item.status}
             />
           ))}
-          <div className="grid grid-cols-2 gap-2 px-2 py-2 text-left">
-            <div className="px-2">
+          <div className="grid grid-cols-5 gap-2 px-1 py-2 text-left">
+            <div className="px-1 col-span-2">
               <div className="text-xxs font-mr underline dotted-underline text-text3">
                 Funding
               </div>
-              <div className="font-meb text-xs  text-warningd">0.012%</div>
+              <div className="font-meb text-xs text-warningd">0.012%</div>
             </div>
-            <div className="px-2">
+            <div className="px-1 col-span-3">
               <div className="text-xxs font-mr underline dotted-underline text-text3">
                 Next funding
               </div>

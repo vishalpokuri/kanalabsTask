@@ -15,13 +15,13 @@ const HeaderButton: React.FC<HeaderButtonProps> = ({
   onClick,
 }) => (
   <button
-    className="flex items-center justify-center gap-1 px-3 py-2 bg-transparent border-none cursor-pointer text-text2"
+    className="flex items-center justify-center gap-1 px-3 py-2 bg-transparent border-none cursor-pointer text-text2 max-[1150px]:hidden"
     onClick={() => onClick(text as Tab)}
   >
     <span className={`flex items-center ${selected ? "text-cyan" : ""}`}>
       {svg}
     </span>
-    <span className={`text-xs font-meb ${selected ? "text-cyan" : ""}`}>
+    <span className={`text-xs font-meb  ${selected ? "text-cyan" : ""}`}>
       {text}
     </span>
   </button>

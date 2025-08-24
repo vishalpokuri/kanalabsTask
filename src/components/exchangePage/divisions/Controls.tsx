@@ -12,7 +12,7 @@ import { DownloadIcon, UploadIcon } from "../../../Svg/chartIcons";
 function Controls() {
   const [sliderValue, setSliderValue] = useState(50);
   return (
-    <aside className="w-60 space-y-2 items-start py-1 mr-1">
+    <aside className="w-60 space-y-2 items-start py-1 mr-1 max-[1350px]:hidden">
       {/* Profile and USDT section */}
       <BorderCard>
         <section className="p-2 flex w-full items-center">

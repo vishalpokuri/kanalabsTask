@@ -10,6 +10,8 @@ import ExchangePage from "./pages/ExchangePage";
 import SwapPage from "./pages/SwapPage";
 import { Button } from "./components/ui/Button";
 import { ThemeProvider, useTheme } from "./contexts/ThemeContext.tsx";
+import ButtonShowcase from "./pages/ButtonShowcase.tsx";
+import CustomButton from "./components/ui/CustomButton.tsx";
 
 function Home() {
   const navigate = useNavigate();
@@ -20,12 +22,23 @@ function Home() {
       <div className="flex flex-col items-center gap-6">
         {/* Navigation buttons */}
         <div className="flex gap-4">
-          <Button onClick={() => navigate("/exchange")} variant="secondary">
+          <CustomButton
+            size="medium"
+            action=""
+            onClick={() => navigate("/exchange")}
+            variant="secondary"
+          >
             Exchange
-          </Button>
-          <Button onClick={() => navigate("/swap")} variant="secondary">
+          </CustomButton>
+          <CustomButton onClick={() => navigate("/swap")} variant="secondary">
             Swap
-          </Button>
+          </CustomButton>
+          <CustomButton
+            onClick={() => navigate("/buttons")}
+            variant="secondary"
+          >
+            Buttons
+          </CustomButton>
         </div>
 
         {/* Dark mode toggle */}
@@ -48,6 +61,7 @@ function AppContent() {
       <Route path="/" element={<Home />} />
       <Route path="/exchange" element={<ExchangePage />} />
       <Route path="/swap" element={<SwapPage />} />
+      <Route path="/buttons" element={<ButtonShowcase />} />
     </Routes>
   );
 }

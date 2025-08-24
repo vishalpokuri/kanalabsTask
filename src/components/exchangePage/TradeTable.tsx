@@ -42,7 +42,7 @@ function TradeTable() {
           >
             <div
               className={`w-10 ${
-                trade.side === "buy" ? "text-green-400" : "text-red-400"
+                trade.side === "buy" ? "text-successd" : "text-errord"
               }`}
             >
               {trade.price}

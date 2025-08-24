@@ -9,7 +9,7 @@ function SwapLayout({ children }: SwapLayoutProps) {
   return (
     <div className="w-full h-full flex flex-col bg-background">
       <SwapHeader />
-      {children}
+      <section className="overflow-auto flex-1 px-2 ">{children}</section>
       <Footer />
     </div>
   );

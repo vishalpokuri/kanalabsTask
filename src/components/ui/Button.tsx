@@ -1,6 +1,6 @@
 import React from "react";
 
-interface ButtonProps {
+interface CustomButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   disabled?: boolean;
@@ -12,7 +12,7 @@ interface ButtonProps {
   iconLeft?: React.ReactNode;
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<CustomButtonProps> = ({
   children,
   onClick,
   disabled = false,

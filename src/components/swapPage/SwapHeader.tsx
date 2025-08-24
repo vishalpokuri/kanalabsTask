@@ -30,7 +30,7 @@ function SwapHeader() {
       {/* Left Side  */}
       <div className="flex">
         <img src="/mainIcons/kanaLabs.svg" alt="" />
-        <div className="ml-8 flex">
+        <div className="ml-8 flex ">
           {headerButtons.map((item) => (
             <HeaderButton
               text={item.key}
